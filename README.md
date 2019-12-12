@@ -1,9 +1,9 @@
 # Cubing App
 
-# Install Instructions
+## Install Instructions
 
 Run ```npm install``` to install all of the necessary packages
 
-# Start Instructions
+## Start Instructions
 
 Run ```expo start``` to start the React Native Expo project
