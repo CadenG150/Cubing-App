@@ -86,60 +86,61 @@ class OLL extends React.Component {
         <ScrollView>
           <View style={styles.header}>
             <Text style={styles.headerText}>OLL</Text>
+            <Text style={styles.smallHeader}>Click On A Case's Name To See The Algorithm</Text>
           </View>
           <View style={styles.images}>
           </View>
           <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: R U2 R2 F R F' U2 R' F R F'")}>
-              <Text style={styles.algorithmstext}>OLL 1</Text>
+              <Text style={styles.algorithmstext}>OLL 1 &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./OLL-1.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: F R U R' U' F' f R U R' U' f'")}>
-              <Text style={styles.algorithmstext}>OLL 2</Text>
+              <Text style={styles.algorithmstext}>OLL 2 &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./OLL-2.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>  
             <TouchableOpacity onPress={() => alert("Algorithms: y' f R U R' U' f' U' F R U R' U' F'")}>
-              <Text style={styles.algorithmstext}>OLL 3</Text>
+              <Text style={styles.algorithmstext}>OLL 3 &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./OLL-3.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: y' f R U R' U' f' U F R U R' U' F'")}>
-              <Text style={styles.algorithmstext}>OLL 4</Text>
+              <Text style={styles.algorithmstext}>OLL 4 &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./OLL-4.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: r' U2 R U R' U r")}>
-              <Text style={styles.algorithmstext}>OLL 5</Text>
+              <Text style={styles.algorithmstext}>OLL 5 &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./OLL-5.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: r U2 R' U' R U' r'")}>
-              <Text style={styles.algorithmstext}>OLL 6</Text>
+              <Text style={styles.algorithmstext}>OLL 6 &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./OLL-6.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: r U R' U R U2 r'")}>
-              <Text style={styles.algorithmstext}>OLL 7</Text>
+              <Text style={styles.algorithmstext}>OLL 7 &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./OLL-7.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: y2 r' U' R U' R' U2 r")}>
-              <Text style={styles.algorithmstext}>OLL 8</Text>
+              <Text style={styles.algorithmstext}>OLL 8 &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./OLL-8.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: y R U R' U' R' F R2 U R' U' F'")}>
-              <Text style={styles.algorithmstext}>OLL 9</Text>
+              <Text style={styles.algorithmstext}>OLL 9 &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./OLL-9.png')} style={styles.image}></Image>
             </View>
@@ -408,7 +409,7 @@ class OLL extends React.Component {
               <Image source={require('./OLL-53.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
-            <TouchableOpacity onPress={() => alert("Algorithms: ")}>
+            <TouchableOpacity onPress={() => alert("Algorithms: r U R' U R U' R' U R U2 r'")}>
               <Text style={styles.algorithmstext}>OLL 54</Text>
             </TouchableOpacity>
               <Image source={require('./OLL-54.png')} style={styles.image}></Image>
@@ -458,14 +459,14 @@ class PLL extends React.Component {
               <Image source={require('./PLL-2.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
-            <TouchableOpacity onPress={() => alert("Algorithms: x' (R U' R') D (R U R') D' (R U R') D (R U' R') D'")}>
-              <Text style={styles.algorithmstext}>PLL 3 - E</Text>
+            <TouchableOpacity onPress={() => alert("Algorithms: x' R U' R' D R U R' D' R U R' D R U' R' D'")}>
+              <Text style={styles.algorithmstext}>PLL 3 - E &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./PLL-3.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
-            <TouchableOpacity onPress={() => alert("Algorithms: U' (R' U' F') (R U R' U' R' F R2 U' R' U' R U R') U R")}>
-              <Text style={styles.algorithmstext}>PLL 4 - F</Text>
+            <TouchableOpacity onPress={() => alert("Algorithms: U' R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R")}>
+              <Text style={styles.algorithmstext}>PLL 4 - F &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./PLL-4.png')} style={styles.image}></Image>
             </View>
@@ -495,7 +496,7 @@ class PLL extends React.Component {
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: M2 U M2 U2 M2 U M2")}>
-              <Text style={styles.algorithmstext}>PLL 9 - H</Text>
+              <Text style={styles.algorithmstext}>PLL 9 - H &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./PLL-9.png')} style={styles.image}></Image>
             </View>
@@ -537,7 +538,7 @@ class PLL extends React.Component {
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: R U R' U' R' F R2 U' R' U' R U R' F' ")}>
-              <Text style={styles.algorithmstext}>PLL 16 - T</Text>
+              <Text style={styles.algorithmstext}>PLL 16 - T &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./PLL-16.png')} style={styles.image}></Image>
             </View>
@@ -555,19 +556,19 @@ class PLL extends React.Component {
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: R' U R' U' y R' F' R2 U' R' U R' F R F")}>
-              <Text style={styles.algorithmstext}>PLL 19 - V</Text>
+              <Text style={styles.algorithmstext}>PLL 19 - V &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./PLL-19.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: F R U' R' U' R U R' F' R U R' U' R' F R F'")}>
-              <Text style={styles.algorithmstext}>PLL 20 - Y</Text>
+              <Text style={styles.algorithmstext}>PLL 20 - Y &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./PLL-20.png')} style={styles.image}></Image>
             </View>
             <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: M2 U M2 U M' U2 M2 U2 M'")}>
-              <Text style={styles.algorithmstext}>PLL 21 - Z</Text>
+              <Text style={styles.algorithmstext}>PLL 21 - Z &nbsp;</Text>
             </TouchableOpacity>
               <Image source={require('./PLL-21.png')} style={styles.image}></Image>
             </View>
@@ -603,6 +604,11 @@ const styles = StyleSheet.create({
   headerText: {
     color: 'black',
     fontSize: 36,
+    padding: 20,
+  },
+  smallHeader: {
+    color: 'black',
+    fontSize: 28,
     padding: 20,
   },
   algorithms: {
