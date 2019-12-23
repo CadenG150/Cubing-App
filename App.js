@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, Image, Text, Platform, StyleSheet, Component, TouchableOpacity, SafeAreaView, ScrollView} from 'react-native';
+import { Button, View, Image, Text, Platform, StyleSheet, Component, TouchableOpacity, SafeAreaView, ScrollView, AsyncStorage} from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -23,9 +23,32 @@ class HomeScreen extends React.Component {
             title="Trainer"
             onPress={() => this.props.navigation.navigate('Trainer')}
           />
+          <Button
+            title="Save Data"
+            onPress={this.saveData}
+          />
+          <Button
+            title="Display Data"
+            onPress={this.displayData}
+          />
         </View>
       </View>
     );
+  }
+  saveData() {
+    let user = 'John Doe';
+    AsyncStorage.setItem('user', user)
+  }
+
+  displayData = async ()=> {
+    try {
+      let user = await AsyncStorage.getItem('user');
+      alert(user);
+    }
+
+    catch(error) {
+      alert(error);
+    }
   }
 }
 
