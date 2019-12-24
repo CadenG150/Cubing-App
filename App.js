@@ -2,6 +2,9 @@ import * as React from 'react';
 import { Button, View, Image, Text, Platform, StyleSheet, Component, TouchableOpacity, SafeAreaView, ScrollView, AsyncStorage} from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import MultipleChoice from 'react-native-multiple-choice';
+import PropTypes from 'prop-types';
+//import { CheckBox } from 'react-native-elements';
 
 class HomeScreen extends React.Component {
   render() {
@@ -111,6 +114,26 @@ class OLL extends React.Component {
             <Text style={styles.headerText}>OLL</Text>
             <Text style={styles.smallHeader}>Click On A Case's Name To See The Algorithm</Text>
           </View>
+          <MultipleChoice
+            options={[
+            'All Edges Oriented',
+            'No Edges Oriented',
+            'P Shapes',
+            'W Shapes',
+            'L Shapes',
+            'C Shapes',
+            'T Shapes',
+            'Bar Shapes',
+            'Square Shapes',
+            'Big Lightning Bolt Shapes',
+            'Small Lightning Bolt Shapes',
+            'Fish Shapes',
+            'Knight Shapes',
+            'Awkward Shapes',
+            'All Corners Oriented'
+            ]}
+            onSelection={(option)=>alert(option + ' was selected!')}
+          />
           <View style={styles.images}>
           </View>
           <View style={styles.algorithms}>
