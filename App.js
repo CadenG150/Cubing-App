@@ -492,6 +492,32 @@ class PLL extends React.Component {
           <View style={styles.header}>
             <Text style={styles.headerText}>PLL</Text>
           </View>
+          <MultipleChoice
+            options={[
+            'Ua',
+            'Ub',
+            'H',
+            'Z',
+            'Aa',
+            'Ab',
+            'E',
+            'Ga',
+            'Gb',
+            'Gc',
+            'Gd',
+            'Ra',
+            'Rb',
+            'Ja',
+            'Jb',
+            'Na',
+            'Nb',
+            'Y',
+            'F',
+            'T',
+            'V'
+            ]}
+            onSelection={(option)=>alert(option + ' was selected!')}
+          />
           <View style={styles.algorithms}>
             <TouchableOpacity onPress={() => alert("Algorithms: x R' U R' D2 R U' R' D2 R2")}>
               <Text style={styles.algorithmstext}>PLL 1 - Aa</Text>
