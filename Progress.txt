@@ -1,1 +1,1 @@
-Day 10 - Got all of the inverse algorithms for OLL into a JSON structure so that I can use them for the scrambles for each case.  I plan on implementing this scramble feature soon.  First I need to add a case selector so that it can send you the right algorithm.
+Day 24 - Just finished function to get data from cases.  Trainer section is going to be built soon.
