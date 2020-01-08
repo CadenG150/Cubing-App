@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 4240,
+  "packagerPort": null,
+  "packagerPid": null,
   "expoServerNgrokUrl": "https://pe-p3v.cadeng150.cubing-app.exp.direct",
   "packagerNgrokUrl": "https://packager.pe-p3v.cadeng150.cubing-app.exp.direct",
-  "ngrokPid": 19200
+  "ngrokPid": 24840
 }

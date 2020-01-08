@@ -430,6 +430,10 @@ class HomeScreen extends React.Component {
             title="Test Variables"
             onPress={this.getAlgorithms}
           />
+          <Button 
+            title="Settings"
+            onPress={() => this.props.navigation.navigate('Settings')}
+          />
         </View>
       </View>
     );
@@ -454,10 +458,13 @@ class HomeScreen extends React.Component {
     // let saved_sets = await AsyncStorage.getItem('saved_sets') // This will read the sets when I add in saving
     saved = ["fish", "square"] // This needs to pull the ones they selected from the checkboxes/local storage
     algstotrain = []
+    y = 0
     for (let x = 0; x < saved.length; x++) {
-      const currentcase = saved[x];
-      for (let y = 0; x< inverse_algorithms.length; y++) {
-        if (currentcase == inverse_algorithms[y].set) {
+      const currentcase = saved[x].set;
+      for (let y = 0; y < 58; y++) {
+        let currentset = inverse_algorithms[y].set
+        alert(currentcase)
+        if (currentcase == currentset) {
           algstotrain.push(inverse_algorithms[y].algorithm)
         }
       }
@@ -494,6 +501,10 @@ class Algorithms extends React.Component {
             title="Trainer"
             onPress={() => this.props.navigation.navigate('Trainer')}
           />
+          <Button 
+            title="Settings"
+            onPress={() => this.props.navigation.navigate('Settings')}
+          />
         </View>
       </View>
     );
@@ -510,6 +521,20 @@ class Trainer extends React.Component {
         <View style={styles.scrambles}>
           <Text style={styles.scramble}>This Is Where The Scrambler Goes</Text>
         </View>
+      </View>
+    )
+  }
+}
+
+class Settings extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.headerText}>Settings</Text>
+        </View>
+        <Text>Donate Here: INSERT DONATION LINK HERE - Donations are not required, but they are always appreciated.  Since this game has no ads and is a free app, we have to make back the money it cost to publish somehow.  Thanks for everyone's support!</Text>
+        <Text>Custom Settings Coming Soon</Text>
       </View>
     )
   }
