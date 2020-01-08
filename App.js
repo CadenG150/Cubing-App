@@ -4,6 +4,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import MultipleChoice from 'react-native-multiple-choice';
 import PropTypes from 'prop-types';
+import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
 //import { CheckBox } from 'react-native-elements';
 
 var inverse_algorithms = [{
@@ -512,17 +513,67 @@ class Algorithms extends React.Component {
 }
 
 class Trainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      timerStart: false,
+      stopwatchStart: false,
+      totalDuration: 90000,
+      timerReset: false,
+      stopwatchReset: false,
+    };
+    this.toggleTimer = this.toggleTimer.bind(this);
+    this.resetTimer = this.resetTimer.bind(this);
+    this.toggleStopwatch = this.toggleStopwatch.bind(this);
+    this.resetStopwatch = this.resetStopwatch.bind(this);
+  }
+ 
+  toggleTimer() {
+    this.setState({timerStart: !this.state.timerStart, timerReset: false});
+  }
+ 
+  resetTimer() {
+    this.setState({timerStart: false, timerReset: true});
+  }
+ 
+  toggleStopwatch() {
+    this.setState({stopwatchStart: !this.state.stopwatchStart, stopwatchReset: false});
+  }
+ 
+  resetStopwatch() {
+    this.setState({stopwatchStart: false, stopwatchReset: true});
+  }
+  
+  getFormattedTime(time) {
+      this.currentTime = time;
+  };
+ 
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.headerText}>Trainer</Text>
-        </View>
-        <View style={styles.scrambles}>
-          <Text style={styles.scramble}>This Is Where The Scrambler Goes</Text>
-        </View>
+      <View>
+        <Stopwatch laps msecs start={this.state.stopwatchStart}
+          reset={this.state.stopwatchReset}
+          options={options}
+          getTime={this.getFormattedTime} />
+        <TouchableHighlight onPress={this.toggleStopwatch}>
+          <Text style={{fontSize: 30}}>{!this.state.stopwatchStart ? "Start" : "Stop"}</Text>
+        </TouchableHighlight>
+        <TouchableHighlight onPress={this.resetStopwatch}>
+          <Text style={{fontSize: 30}}>Reset</Text>
+        </TouchableHighlight>
+        <Timer totalDuration={this.state.totalDuration} msecs start={this.state.timerStart}
+          reset={this.state.timerReset}
+          options={options}
+          handleFinish={handleTimerComplete}
+          getTime={this.getFormattedTime} />
+        <TouchableHighlight onPress={this.toggleTimer}>
+          <Text style={{fontSize: 30}}>{!this.state.timerStart ? "Start" : "Stop"}</Text>
+        </TouchableHighlight>
+        <TouchableHighlight onPress={this.resetTimer}>
+          <Text style={{fontSize: 30}}>Reset</Text>
+        </TouchableHighlight>
       </View>
-    )
+    );
   }
 }
 
@@ -536,6 +587,24 @@ class Settings extends React.Component {
         <Text>Donate Here: INSERT DONATION LINK HERE - Donations are not required, but they are always appreciated.  Since this game has no ads and is a free app, we have to make back the money it cost to publish somehow.  Thanks for everyone's support!</Text>
         <Text>Custom Settings Coming Soon</Text>
         <Text>You Can Contact Us By Sending An Email To cubingapp@gmail.com</Text>
+        <View style={styles.navbar}>
+          <Button
+            title="Home"
+            onPress={() => this.props.navigation.navigate('Home')}
+          />
+          <Button
+            title="Algorithms"
+            onPress={() => this.props.navigation.navigate('Algorithms')}
+          />
+          <Button
+            title="Trainer"
+            onPress={() => this.props.navigation.navigate('Trainer')}
+          />
+          <Button 
+            title="Settings"
+            onPress={() => this.props.navigation.navigate('Settings')}
+          />
+        </View>
       </View>
     )
   }

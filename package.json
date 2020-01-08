@@ -19,6 +19,7 @@
     "react-native-multiple-choice": "0.0.8",
     "react-native-reanimated": "^1.4.0",
     "react-native-screens": "^2.0.0-alpha.17",
+    "react-native-stopwatch-timer": "0.0.21",
     "react-native-unimodules": "^0.6.0",
     "react-native-web": "^0.11.7",
     "react-navigation": "^4.0.10",
