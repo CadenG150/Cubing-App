@@ -535,6 +535,7 @@ class Settings extends React.Component {
         </View>
         <Text>Donate Here: INSERT DONATION LINK HERE - Donations are not required, but they are always appreciated.  Since this game has no ads and is a free app, we have to make back the money it cost to publish somehow.  Thanks for everyone's support!</Text>
         <Text>Custom Settings Coming Soon</Text>
+        <Text>You Can Contact Us By Sending An Email To cubingapp@gmail.com</Text>
       </View>
     )
   }
@@ -1161,6 +1162,7 @@ const RootStack = createStackNavigator({
   Home: HomeScreen,
   Algorithms: Algorithms,
   Trainer: Trainer,
+  Settings: Settings,
   OLL: OLL,
   PLL: PLL,
   CMLL: CMLL,
